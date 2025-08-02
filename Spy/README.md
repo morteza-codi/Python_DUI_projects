@@ -1,138 +1,69 @@
-<<<<<<< HEAD
-# System Monitor (Spy) Application
+# Spy Tool
 
-A comprehensive system monitoring application built with PyQt6 that provides keylogging, webcam capture, screenshot functionality, and Chrome password extraction capabilities.
+A monitoring application built with Python and PyQt6 that captures keystrokes, screenshots, webcam images, and browser passwords.
 
 ## Features
 
-1. **Keylogger**: Records all keyboard inputs with timestamps
-2. **Webcam Capture**: Takes photos from the webcam at configurable intervals
-3. **Screenshot Capture**: Takes screen captures at configurable intervals
-4. **Chrome Password Extraction**: Extracts saved passwords from Chrome browser
-5. **Configuration Dialog**: Customize monitoring settings
-6. **Multi-threaded Operation**: All monitoring runs in separate threads
-7. **Progress Tracking**: Real-time progress updates and status
+- **Keylogger**: Records keyboard input and saves it to a text file
+- **Screenshot Capture**: Takes periodic screenshots of the screen
+- **Webcam Capture**: Takes periodic images from the webcam
+- **Browser Password Extraction**: Extracts saved passwords from Chrome browser
+- **Data Viewer**: View all captured data in a user-friendly interface
+- **Configurable Settings**: Customize capture intervals and counts
 
 ## Requirements
 
-- Python 3.7 or higher
-- Windows OS (for Chrome password extraction)
+- Windows OS
+- Python 3.8+
+- Chrome browser (for password extraction)
+- Webcam (for webcam capture)
 
 ## Installation
 
-1. Install the required dependencies:
-```bash
-pip install -r requirements.txt
-```
+1. Clone the repository or download the source code
+2. Install the required packages:
 
-2. Run the application:
-```bash
-python main.py
+```
+pip install -r requirements.txt
 ```
 
 ## Usage
 
-### Main Interface
-- **Start**: Begin monitoring with current configuration
-- **Show Data**: View captured data (keylog, webcam photos, screenshots, passwords)
-- **Configure**: Open configuration dialog to customize settings
-- **Stop**: Stop current monitoring session
-- **Close**: Exit the application
-
-### Configuration Options
-
-#### Keylogger Settings
-- Enable/disable keylogger
-- Press ESC to stop keylogger manually
-
-#### Webcam Settings
-- Enable/disable webcam capture
-- Set number of photos to capture
-- Set interval between photos (seconds)
-
-#### Screenshot Settings
-- Enable/disable screenshot capture
-- Set number of screenshots to capture
-- Set interval between screenshots (seconds)
-
-#### Password Extraction
-- Enable/disable Chrome password extraction
-- Requires Chrome browser and appropriate permissions
-
-## File Structure
+1. Run the application:
 
 ```
-project_GUI/Spy/
-├── main.py              # Main application file
-├── keylogger.py         # Auto-generated UI file
-├── keylogger.ui         # UI design file
-├── requirements.txt     # Dependencies
-├── README.md           # This file
-├── key/                # Keylogger output
-│   └── key.txt
-├── webcam/             # Webcam captures
-├── screen_shot/        # Screenshots
-└── web_passwd/         # Chrome passwords
-    └── passwd.txt
+python main.py
 ```
 
-## Data Output
+2. Click the "START" button to begin monitoring
+3. Click the "SHOW DATA" button to view captured data
+4. Click the "SETTINGS" button to configure capture settings
+5. Click the "EXIT" button to close the application
 
-- **Keylogger**: Stored in `key/key.txt` with timestamps
-- **Webcam Photos**: Stored in `webcam/` folder with timestamps
-- **Screenshots**: Stored in `screen_shot/` folder with timestamps
-- **Chrome Passwords**: Stored in `web_passwd/passwd.txt`
+## Configuration
 
-## Security Notes
+You can configure the following settings:
 
-⚠️ **Important**: This application is designed for educational and legitimate monitoring purposes only. Users are responsible for:
+- Number of webcam captures
+- Interval between webcam captures (in seconds)
+- Number of screenshot captures
+- Interval between screenshot captures (in seconds)
 
-1. Complying with local laws and regulations
-2. Obtaining proper consent before monitoring
-3. Securing captured data appropriately
-4. Using the application ethically and responsibly
+Settings are saved to `spy_config.json` in the application directory.
 
-## Troubleshooting
+## Data Storage
 
-### Common Issues
+Data is stored in the following directories:
 
-1. **Screenshot not working**: 
-   - Ensure pyautogui is installed: `pip install pyautogui`
-   - Check if the application has screen capture permissions
+- Keystrokes: `./key/key.txt`
+- Webcam images: `./webcam/`
+- Screenshots: `./screen_shot/`
+- Browser passwords: `./web_passwd/passwd.txt`
 
-2. **Webcam not working**:
-   - Ensure opencv-python is installed
-   - Check if camera is available and not used by another application
+## Disclaimer
 
-3. **Password extraction not working**:
-   - Ensure Chrome is closed during extraction
-   - Requires Windows OS and proper permissions
-   - Install pycryptodome and pywin32
-
-4. **Keylogger not working**:
-   - May require administrator privileges
-   - Ensure pynput is installed correctly
-
-### Dependencies Issues
-
-If you encounter import errors, reinstall all dependencies:
-```bash
-pip uninstall -y pyautogui opencv-python pynput pycryptodome pywin32 PyQt6 pillow
-pip install -r requirements.txt
-```
-
-## Technical Details
-
-- Built with PyQt6 for the GUI
-- Uses threading for concurrent monitoring
-- Implements proper error handling and fallback methods
-- Supports graceful shutdown and cleanup
-- Progress tracking with real-time updates
+This tool is intended for educational purposes only. Using this tool to monitor others without their knowledge or consent may be illegal in your jurisdiction. Always obtain proper authorization before using this tool.
 
 ## License
 
-This project is for educational purposes. Please ensure you comply with all applicable laws and regulations when using this software.
-=======
-# Project_GUI_Python
-Graphic projects in Python
->>>>>>> 1900b56c5a481be31b1ae92edac8bad91fd48d97
+This project is licensed under the MIT License - see the LICENSE file for details.

@@ -1,7 +1,7 @@
-pyautogui>=0.9.54
-opencv-python>=4.11.0.86
-pynput>=1.8.1
-pycryptodome>=3.23.0
-pywin32>=311
-PyQt6>=6.0.0
-pillow>=11.2.1
+PyQt6==6.5.0
+pynput==1.7.6
+pyautogui==0.9.54
+opencv-python==4.7.0.72
+pycryptodome==3.18.0
+pywin32==306
+Pillow==10.0.0

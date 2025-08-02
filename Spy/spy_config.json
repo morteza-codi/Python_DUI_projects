@@ -1,0 +1,6 @@
+{
+    "webcam_captures": 10,
+    "webcam_interval": 2,
+    "screenshot_captures": 10,
+    "screenshot_interval": 3
+}
