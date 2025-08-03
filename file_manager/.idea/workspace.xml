@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="addd19f6-0d6d-491d-90ae-1a71fc9c17cd" name="Changes" comment="" />
+    <list default="true" id="addd19f6-0d6d-491d-90ae-1a71fc9c17cd" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../Spy/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Spy/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spy/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../Spy/requirements.txt" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -92,7 +95,8 @@
       <workItem from="1754136777239" duration="89000" />
       <workItem from="1754124750773" duration="27000" />
       <workItem from="1754129853349" duration="662000" />
-      <workItem from="1754131781673" duration="309000" />
+      <workItem from="1754131781673" duration="1207000" />
+      <workItem from="1754209157285" duration="42000" />
     </task>
     <servers />
   </component>
