@@ -1,0 +1,9 @@
+# Snake Game - Python Dependencies
+# Install with: pip install -r requirements.txt
+
+# Tkinter - Standard Python interface to the Tk GUI toolkit
+# Typically comes pre-installed with Python on Windows and macOS
+# For Linux systems, it may need to be installed via a package manager
+
+# Note: The 'random' and 'sys' modules used in the game are part of Python's
+# standard library and don't need to be installed separately.

@@ -1,0 +1,9 @@
+# Coin Collecting Game - Python Dependencies
+# Install with: pip install -r requirements.txt
+
+# Pygame - Cross-platform set of Python modules designed for writing video games
+# Provides graphics, sound, and game development functionality
+pygame>=2.0.0
+
+# Note: The 'random' module used in the game is part of Python's standard library
+# and doesn't need to be installed separately.
