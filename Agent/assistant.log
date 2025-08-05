@@ -1,0 +1,58 @@
+2025-08-05 13:37:21,977 - comtypes.client._code_cache - INFO - Imported existing <module 'comtypes.gen' from 'D:\\project_GUI\\Agent\\.venv\\Lib\\site-packages\\comtypes\\gen\\__init__.py'>
+2025-08-05 13:37:21,977 - comtypes.client._code_cache - INFO - Using writeable comtypes cache directory: 'D:\project_GUI\Agent\.venv\Lib\site-packages\comtypes\gen'
+2025-08-05 13:37:22,081 - __main__ - INFO - TTS engine initialized successfully
+2025-08-05 13:44:57,663 - comtypes.client._code_cache - INFO - Could not import comtypes.gen, trying to create it.
+2025-08-05 13:44:57,664 - comtypes.client._code_cache - INFO - Created comtypes.gen directory: 'C:\Users\mory\AppData\Local\Programs\Python\Python313\Lib\site-packages\comtypes\gen'
+2025-08-05 13:44:57,664 - comtypes.client._code_cache - INFO - Writing __init__.py file: 'C:\Users\mory\AppData\Local\Programs\Python\Python313\Lib\site-packages\comtypes\gen\__init__.py'
+2025-08-05 13:44:57,685 - comtypes.client._code_cache - INFO - Using writeable comtypes cache directory: 'C:\Users\mory\AppData\Local\Programs\Python\Python313\Lib\site-packages\comtypes\gen'
+2025-08-05 13:44:57,701 - comtypes.client._generate - INFO - Could not import comtypes.gen._C866CA3A_32F7_11D2_9602_00C04F8EE628_0_5_4: No module named 'comtypes.gen._C866CA3A_32F7_11D2_9602_00C04F8EE628_0_5_4'
+2025-08-05 13:44:57,705 - comtypes.client._generate - INFO - # Generating comtypes.gen._C866CA3A_32F7_11D2_9602_00C04F8EE628_0_5_4
+2025-08-05 13:44:57,759 - comtypes.client._generate - INFO - # Generating comtypes.gen.SpeechLib
+2025-08-05 13:44:57,765 - comtypes.client._generate - INFO - Could not import comtypes.gen._00020430_0000_0000_C000_000000000046_0_2_0: No module named 'comtypes.gen._00020430_0000_0000_C000_000000000046_0_2_0'
+2025-08-05 13:44:57,765 - comtypes.client._generate - INFO - # Generating comtypes.gen._00020430_0000_0000_C000_000000000046_0_2_0
+2025-08-05 13:44:57,771 - comtypes.client._generate - INFO - # Generating comtypes.gen.stdole
+2025-08-05 13:44:58,377 - __main__ - INFO - TTS engine initialized successfully
+2025-08-05 13:48:47,813 - comtypes.client._code_cache - INFO - Imported existing <module 'comtypes.gen' from 'C:\\Users\\mory\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\comtypes\\gen\\__init__.py'>
+2025-08-05 13:48:47,814 - comtypes.client._code_cache - INFO - Using writeable comtypes cache directory: 'C:\Users\mory\AppData\Local\Programs\Python\Python313\Lib\site-packages\comtypes\gen'
+2025-08-05 13:48:47,954 - __main__ - INFO - TTS engine initialized successfully
+2025-08-05 13:49:58,580 - comtypes.client._code_cache - INFO - Imported existing <module 'comtypes.gen' from 'C:\\Users\\mory\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\comtypes\\gen\\__init__.py'>
+2025-08-05 13:49:58,581 - comtypes.client._code_cache - INFO - Using writeable comtypes cache directory: 'C:\Users\mory\AppData\Local\Programs\Python\Python313\Lib\site-packages\comtypes\gen'
+2025-08-05 13:49:58,679 - __main__ - INFO - TTS engine initialized successfully
+2025-08-05 13:50:41,601 - __main__ - INFO - Spoke text: Good afternoon! What is your name?...
+2025-08-05 13:50:41,603 - __main__ - ERROR - Error taking command: Could not find PyAudio; check installation
+2025-08-05 13:51:41,191 - comtypes.client._code_cache - INFO - Imported existing <module 'comtypes.gen' from 'D:\\project_GUI\\Agent\\.venv\\Lib\\site-packages\\comtypes\\gen\\__init__.py'>
+2025-08-05 13:51:41,191 - comtypes.client._code_cache - INFO - Using writeable comtypes cache directory: 'D:\project_GUI\Agent\.venv\Lib\site-packages\comtypes\gen'
+2025-08-05 13:51:41,328 - __main__ - INFO - TTS engine initialized successfully
+2025-08-05 13:52:26,715 - __main__ - INFO - Recognized command: take photo
+2025-08-05 13:52:29,199 - __main__ - INFO - Spoke text: Taking a photo...
+2025-08-05 13:52:33,504 - __main__ - INFO - Spoke text: Photo saved as photo_20250805_135232.jpg...
+2025-08-05 13:54:17,630 - comtypes.client._code_cache - INFO - Imported existing <module 'comtypes.gen' from 'D:\\project_GUI\\Agent\\.venv\\Lib\\site-packages\\comtypes\\gen\\__init__.py'>
+2025-08-05 13:54:17,631 - comtypes.client._code_cache - INFO - Using writeable comtypes cache directory: 'D:\project_GUI\Agent\.venv\Lib\site-packages\comtypes\gen'
+2025-08-05 13:54:17,711 - __main__ - INFO - TTS engine initialized successfully
+2025-08-05 13:54:33,844 - __main__ - INFO - Settings saved successfully
+2025-08-05 13:54:33,845 - __main__ - INFO - Settings saved successfully
+2025-08-05 13:54:38,334 - __main__ - INFO - Recognized command: hello
+2025-08-05 13:55:04,787 - __main__ - INFO - Spoke text: mory and sina and kali linux...
+2025-08-05 13:55:12,816 - __main__ - INFO - Spoke text: Good afternoon! What is your name?...
+2025-08-05 13:55:18,802 - __main__ - ERROR - Error taking command: listening timed out while waiting for phrase to start
+2025-08-05 13:57:00,194 - __main__ - INFO - Settings loaded successfully
+2025-08-05 13:57:00,227 - comtypes.client._code_cache - INFO - Imported existing <module 'comtypes.gen' from 'D:\\project_GUI\\Agent\\.venv\\Lib\\site-packages\\comtypes\\gen\\__init__.py'>
+2025-08-05 13:57:00,228 - comtypes.client._code_cache - INFO - Using writeable comtypes cache directory: 'D:\project_GUI\Agent\.venv\Lib\site-packages\comtypes\gen'
+2025-08-05 13:57:00,313 - __main__ - INFO - TTS engine initialized successfully
+2025-08-05 13:57:06,484 - __main__ - INFO - Spoke text: Good afternoon! What is your name?...
+2025-08-05 14:00:49,849 - __main__ - INFO - Settings loaded successfully
+2025-08-05 14:00:49,883 - comtypes.client._code_cache - INFO - Imported existing <module 'comtypes.gen' from 'D:\\project_GUI\\Agent\\.venv\\Lib\\site-packages\\comtypes\\gen\\__init__.py'>
+2025-08-05 14:00:49,883 - comtypes.client._code_cache - INFO - Using writeable comtypes cache directory: 'D:\project_GUI\Agent\.venv\Lib\site-packages\comtypes\gen'
+2025-08-05 14:00:49,965 - __main__ - INFO - TTS engine initialized successfully
+2025-08-05 14:05:15,987 - __main__ - INFO - Settings loaded successfully
+2025-08-05 14:05:16,022 - comtypes.client._code_cache - INFO - Imported existing <module 'comtypes.gen' from 'D:\\project_GUI\\Agent\\.venv\\Lib\\site-packages\\comtypes\\gen\\__init__.py'>
+2025-08-05 14:05:16,023 - comtypes.client._code_cache - INFO - Using writeable comtypes cache directory: 'D:\project_GUI\Agent\.venv\Lib\site-packages\comtypes\gen'
+2025-08-05 14:05:16,118 - __main__ - INFO - TTS engine initialized successfully
+2025-08-05 14:05:35,487 - __main__ - INFO - Settings loaded successfully
+2025-08-05 14:05:35,520 - comtypes.client._code_cache - INFO - Imported existing <module 'comtypes.gen' from 'D:\\project_GUI\\Agent\\.venv\\Lib\\site-packages\\comtypes\\gen\\__init__.py'>
+2025-08-05 14:05:35,520 - comtypes.client._code_cache - INFO - Using writeable comtypes cache directory: 'D:\project_GUI\Agent\.venv\Lib\site-packages\comtypes\gen'
+2025-08-05 14:05:35,608 - __main__ - INFO - TTS engine initialized successfully
+2025-08-05 14:05:40,988 - __main__ - INFO - Settings loaded successfully
+2025-08-05 14:05:41,027 - comtypes.client._code_cache - INFO - Imported existing <module 'comtypes.gen' from 'D:\\project_GUI\\Agent\\.venv\\Lib\\site-packages\\comtypes\\gen\\__init__.py'>
+2025-08-05 14:05:41,027 - comtypes.client._code_cache - INFO - Using writeable comtypes cache directory: 'D:\project_GUI\Agent\.venv\Lib\site-packages\comtypes\gen'
+2025-08-05 14:05:41,122 - __main__ - INFO - TTS engine initialized successfully
