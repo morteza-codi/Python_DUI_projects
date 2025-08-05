@@ -1,2 +1,2 @@
-# Python_DUI_projects
+# Python_GUI_projects
 Graphic projects in Python
