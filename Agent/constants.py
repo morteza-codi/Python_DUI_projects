@@ -5,7 +5,7 @@ Contains API keys, file paths, and other configurable values.
 
 # API Keys and External Service Configuration
 WOLFRAMALPHA_APP_ID = "X7RHRG-4JVEER92T2"
-OPENWEATHERMAP_API_KEY = "10e2d0da35d4e43c6f3d7675bc203348"
+OPENWEATHERMAP_API_KEY = "Your API key"
 
 # File Paths
 TELEGRAM_PATH = r"C:\Users\User\AppData\Roaming\Telegram Desktop\Telegram.exe"
