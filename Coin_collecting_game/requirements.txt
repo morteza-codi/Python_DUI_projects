@@ -1,0 +1,18 @@
+# Coin Collecting Game Dependencies
+# بازی سکه و مانع - وابستگی‌ها
+
+# Pygame - Python game development library
+# Used for graphics, sound, input handling, and game loop
+pygame>=2.0.0
+
+# Note: This game only requires pygame as its main dependency.
+# Pygame itself has the following system dependencies that are usually 
+# automatically handled during installation:
+# - SDL2 (Simple DirectMedia Layer)
+# - SDL2_mixer (for audio)
+# - SDL2_image (for image loading)
+# - SDL2_ttf (for font rendering)
+
+# Python Standard Library modules used (no installation required):
+# - random (for obstacle and coin positioning)
+# - Built-in math operations
