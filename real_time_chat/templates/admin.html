@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>پنل مدیریت - چت ریل تایم</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/chart.js@3.7.0/dist/chart.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        
+        .admin-container {
+            padding: 20px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        .admin-header {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+        }
+        
+        .admin-title {
+            color: #2c3e50;
+            font-weight: bold;
+            margin-bottom: 0;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .stat-card {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .stat-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+        }
+        
+        .stat-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: var(--card-color);
+        }
+        
+        .stat-card.users { --card-color: #3498db; }
+        .stat-card.messages { --card-color: #27ae60; }
+        .stat-card.active { --card-color: #f39c12; }
+        .stat-card.rooms { --card-color: #e74c3c; }
+        
+        .stat-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 15px;
+            font-size: 1.5em;
+            color: white;
+        }
+        
+        .stat-card.users .stat-icon { background: #3498db; }
+        .stat-card.messages .stat-icon { background: #27ae60; }
+        .stat-card.active .stat-icon { background: #f39c12; }
+        .stat-card.rooms .stat-icon { background: #e74c3c; }
+        
+        .stat-number {
+            font-size: 2.5em;
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 5px;
+        }
+        
+        .stat-label {
+            color: #6c757d;
+            font-size: 1.1em;
+            margin: 0;
+        }
+        
+        .content-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 30px;
+        }
+        
+        .content-card {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        
+        .card-title {
+            color: #2c3e50;
+            font-weight: bold;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #e9ecef;
+        }
+        
+        .users-table {
+            overflow-x: auto;
+        }
+        
+        .table {
+            margin-bottom: 0;
+        }
+        
+        .table th {
+            border-top: none;
+            color: #2c3e50;
+            font-weight: 600;
+            background: #f8f9fa;
+        }
+        
+        .user-avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: #3498db;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            margin: 0 auto;
+        }
+        
+        .status-badge {
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 0.8em;
+            font-weight: 500;
+        }
+        
+        .status-online {
+            background: #d4edda;
+            color: #155724;
+        }
+        
+        .status-offline {
+            background: #f8d7da;
+            color: #721c24;
+        }
+        
+        .admin-badge {
+            background: #fff3cd;
+            color: #856404;
+        }
+        
+        .action-btn {
+            padding: 5px 10px;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+            font-size: 0.8em;
+            margin: 0 2px;
+            transition: all 0.3s;
+        }
+        
+        .btn-ban {
+            background: #f8d7da;
+            color: #721c24;
+        }
+        
+        .btn-ban:hover {
+            background: #f5c6cb;
+        }
+        
+        .btn-unban {
+            background: #d4edda;
+            color: #155724;
+        }
+        
+        .btn-unban:hover {
+            background: #c3e6cb;
+        }
+        
+        .btn-admin {
+            background: #fff3cd;
+            color: #856404;
+        }
+        
+        .btn-admin:hover {
+            background: #ffeaa7;
+        }
+        
+        .activity-item {
+            display: flex;
+            align-items: center;
+            padding: 15px 0;
+            border-bottom: 1px solid #e9ecef;
+        }
+        
+        .activity-item:last-child {
+            border-bottom: none;
+        }
+        
+        .activity-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            margin-left: 15px;
+            font-size: 0.9em;
+        }
+        
+        .activity-join { background: #27ae60; }
+        .activity-leave { background: #e74c3c; }
+        .activity-message { background: #3498db; }
+        .activity-admin { background: #f39c12; }
+        
+        .activity-content {
+            flex: 1;
+        }
+        
+        .activity-text {
+            margin: 0;
+            color: #2c3e50;
+            font-weight: 500;
+        }
+        
+        .activity-time {
+            margin: 0;
+            color: #6c757d;
+            font-size: 0.9em;
+        }
+        
+        .back-btn {
+            background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 25px;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s;
+        }
+        
+        .back-btn:hover {
+            color: white;
+            text-decoration: none;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(52, 152, 219, 0.4);
+        }
+        
+        .chart-container {
+            position: relative;
+            height: 300px;
+            margin-top: 20px;
+        }
+        
+        .refresh-btn {
+            background: #27ae60;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .refresh-btn:hover {
+            background: #229954;
+            transform: scale(1.05);
+        }
+        
+        @media (max-width: 768px) {
+            .content-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .stats-grid {
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="admin-container">
+        <!-- Header -->
+        <div class="admin-header">
+            <div class="d-flex justify-content-between align-items-center">
+                <div>
+                    <h1 class="admin-title">
+                        <i class="fas fa-shield-alt text-warning me-3"></i>
+                        پنل مدیریت سیستم
+                    </h1>
+                    <p class="text-muted mb-0">مدیریت کاربران و نظارت بر سیستم چت</p>
+                </div>
+                <div>
+                    <button class="refresh-btn me-3" onclick="refreshData()">
+                        <i class="fas fa-sync-alt"></i> بروزرسانی
+                    </button>
+                    <a href="{{ url_for('index') }}" class="back-btn">
+                        <i class="fas fa-arrow-right"></i>
+                        بازگشت به چت
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Statistics Cards -->
+        <div class="stats-grid">
+            <div class="stat-card users">
+                <div class="stat-icon">
+                    <i class="fas fa-users"></i>
+                </div>
+                <div class="stat-number" id="totalUsers">{{ users|length }}</div>
+                <p class="stat-label">کل کاربران</p>
+            </div>
+            
+            <div class="stat-card messages">
+                <div class="stat-icon">
+                    <i class="fas fa-comments"></i>
+                </div>
+                <div class="stat-number" id="totalMessages">{{ message_count }}</div>
+                <p class="stat-label">پیام‌های ارسالی</p>
+            </div>
+            
+            <div class="stat-card active">
+                <div class="stat-icon">
+                    <i class="fas fa-circle"></i>
+                </div>
+                <div class="stat-number" id="activeUsers">{{ active_users|length }}</div>
+                <p class="stat-label">کاربران آنلاین</p>
+            </div>
+            
+            <div class="stat-card rooms">
+                <div class="stat-icon">
+                    <i class="fas fa-door-open"></i>
+                </div>
+                <div class="stat-number" id="totalRooms">{{ rooms|length }}</div>
+                <p class="stat-label">اتاق‌های چت</p>
+            </div>
+        </div>
+        
+        <!-- Content Grid -->
+        <div class="content-grid">
+            <!-- Users Management -->
+            <div class="content-card">
+                <h3 class="card-title">
+                    <i class="fas fa-users-cog text-primary me-2"></i>
+                    مدیریت کاربران
+                </h3>
+                
+                <div class="users-table">
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th>آواتار</th>
+                                <th>نام کاربری</th>
+                                <th>ایمیل</th>
+                                <th>وضعیت</th>
+                                <th>نقش</th>
+                                <th>آخرین ورود</th>
+                                <th>عملیات</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for username, user_data in users.items() %}
+                            <tr>
+                                <td>
+                                    <div class="user-avatar">{{ username[0].upper() }}</div>
+                                </td>
+                                <td>
+                                    <strong>{{ username }}</strong>
+                                </td>
+                                <td>{{ user_data.email or 'تعیین نشده' }}</td>
+                                <td>
+                                    {% if username in active_users %}
+                                        <span class="status-badge status-online">آنلاین</span>
+                                    {% else %}
+                                        <span class="status-badge status-offline">آفلاین</span>
+                                    {% endif %}
+                                </td>
+                                <td>
+                                    {% if user_data.is_admin %}
+                                        <span class="status-badge admin-badge">
+                                            <i class="fas fa-crown"></i> مدیر
+                                        </span>
+                                    {% else %}
+                                        <span class="status-badge">کاربر عادی</span>
+                                    {% endif %}
+                                </td>
+                                <td>
+                                    <small>{{ user_data.last_seen[:16] if user_data.last_seen else 'نامشخص' }}</small>
+                                </td>
+                                <td>
+                                    <button class="action-btn btn-ban" onclick="banUser('{{ username }}')" title="مسدود کردن">
+                                        <i class="fas fa-ban"></i>
+                                    </button>
+                                    <button class="action-btn btn-admin" onclick="toggleAdmin('{{ username }}')" title="تغییر نقش">
+                                        <i class="fas fa-user-shield"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            
+            <!-- Recent Activity -->
+            <div class="content-card">
+                <h3 class="card-title">
+                    <i class="fas fa-history text-info me-2"></i>
+                    فعالیت‌های اخیر
+                </h3>
+                
+                <div id="recentActivity">
+                    <div class="activity-item">
+                        <div class="activity-icon activity-join">
+                            <i class="fas fa-sign-in-alt"></i>
+                        </div>
+                        <div class="activity-content">
+                            <p class="activity-text">سیستم راه‌اندازی شد</p>
+                            <p class="activity-time">همین الان</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- System Statistics Chart -->
+                <div class="mt-4">
+                    <h5>آمار سیستم</h5>
+                    <div class="chart-container">
+                        <canvas id="statsChart"></canvas>
+                    </div>
+                </div>
+                
+                <!-- System Info -->
+                <div class="mt-4">
+                    <h5>اطلاعات سیستم</h5>
+                    <div class="list-group list-group-flush">
+                        <div class="list-group-item d-flex justify-content-between">
+                            <span><i class="fas fa-server text-primary me-2"></i>وضعیت سرور</span>
+                            <span class="badge bg-success">فعال</span>
+                        </div>
+                        <div class="list-group-item d-flex justify-content-between">
+                            <span><i class="fas fa-memory text-warning me-2"></i>استفاده از حافظه</span>
+                            <span class="badge bg-info">متوسط</span>
+                        </div>
+                        <div class="list-group-item d-flex justify-content-between">
+                            <span><i class="fas fa-database text-success me-2"></i>اتصال دیتابیس</span>
+                            <span class="badge bg-success">فعال</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.0/dist/chart.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.js"></script>
+    
+    <script>
+        // Socket connection for real-time updates
+        const socket = io.connect('http://' + document.domain + ':' + location.port);
+        
+        // Initialize chart
+        let statsChart;
+        
+        function initChart() {
+            const ctx = document.getElementById('statsChart').getContext('2d');
+            statsChart = new Chart(ctx, {
+                type: 'doughnut',
+                data: {
+                    labels: ['آنلاین', 'آفلاین', 'مدیران'],
+                    datasets: [{
+                        data: [
+                            {{ active_users|length }},
+                            {{ users|length - active_users|length }},
+                            {{ users.values()|selectattr('is_admin')|list|length }}
+                        ],
+                        backgroundColor: [
+                            '#27ae60',
+                            '#e74c3c', 
+                            '#f39c12'
+                        ],
+                        borderWidth: 0
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            position: 'bottom',
+                            labels: {
+                                padding: 20,
+                                font: {
+                                    family: "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif"
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+        }
+        
+        // Socket events for real-time updates
+        socket.on('user_joined', function(data) {
+            updateStats();
+            addActivityItem('join', data.username + ' وارد چت شد', 'همین الان');
+        });
+        
+        socket.on('user_left', function(data) {
+            updateStats();
+            addActivityItem('leave', data.username + ' از چت خارج شد', 'همین الان');
+        });
+        
+        socket.on('message', function(data) {
+            updateMessageCount();
+            addActivityItem('message', data.username + ' پیام جدیدی فرستاد', 'همین الان');
+        });
+        
+        function updateStats() {
+            // Update active users count
+            fetch('/api/users')
+                .then(response => response.json())
+                .then(data => {
+                    document.getElementById('activeUsers').textContent = data.active_users.length;
+                    document.getElementById('totalUsers').textContent = data.total_users;
+                    
+                    // Update chart
+                    if (statsChart) {
+                        statsChart.data.datasets[0].data[0] = data.active_users.length;
+                        statsChart.data.datasets[0].data[1] = data.total_users - data.active_users.length;
+                        statsChart.update();
+                    }
+                });
+        }
+        
+        function updateMessageCount() {
+            fetch('/api/history')
+                .then(response => response.json())
+                .then(data => {
+                    document.getElementById('totalMessages').textContent = data.length;
+                });
+        }
+        
+        function addActivityItem(type, text, time) {
+            const activityContainer = document.getElementById('recentActivity');
+            const iconClass = {
+                'join': 'activity-join fas fa-sign-in-alt',
+                'leave': 'activity-leave fas fa-sign-out-alt',
+                'message': 'activity-message fas fa-comment',
+                'admin': 'activity-admin fas fa-user-shield'
+            };
+            
+            const newItem = document.createElement('div');
+            newItem.className = 'activity-item';
+            newItem.innerHTML = `
+                <div class="activity-icon ${type}">
+                    <i class="${iconClass[type]}"></i>
+                </div>
+                <div class="activity-content">
+                    <p class="activity-text">${text}</p>
+                    <p class="activity-time">${time}</p>
+                </div>
+            `;
+            
+            activityContainer.insertBefore(newItem, activityContainer.firstChild);
+            
+            // Keep only last 10 items
+            while (activityContainer.children.length > 10) {
+                activityContainer.removeChild(activityContainer.lastChild);
+            }
+        }
+        
+        function banUser(username) {
+            if (confirm(`آیا مطمئن هستید که می‌خواهید ${username} را مسدود کنید؟`)) {
+                fetch('/api/ban_user', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({username: username})
+                })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.success) {
+                        alert('کاربر با موفقیت مسدود شد');
+                        location.reload();
+                    } else {
+                        alert('خطا در مسدود کردن کاربر');
+                    }
+                });
+            }
+        }
+        
+        function toggleAdmin(username) {
+            if (confirm(`آیا می‌خواهید نقش ${username} را تغییر دهید؟`)) {
+                fetch('/api/toggle_admin', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({username: username})
+                })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.success) {
+                        alert('نقش کاربر تغییر کرد');
+                        location.reload();
+                    } else {
+                        alert('خطا در تغییر نقش');
+                    }
+                });
+            }
+        }
+        
+        function refreshData() {
+            location.reload();
+        }
+        
+        // Initialize when page loads
+        document.addEventListener('DOMContentLoaded', function() {
+            initChart();
+        });
+    </script>
+</body>
+</html>
