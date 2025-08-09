@@ -1,0 +1,36 @@
+# GitHub Repository Finder - Requirements
+# Core dependencies for the enhanced application
+
+# GUI Framework
+PyQt6>=6.6.0
+
+# HTTP requests
+requests>=2.31.0
+
+# Date and time utilities (built-in, but listing for clarity)
+# datetime - built-in module
+
+# Logging (built-in)
+# logging - built-in module
+
+# JSON handling (built-in)
+# json - built-in module
+
+# System utilities (built-in)
+# sys - built-in module
+# os - built-in module
+# webbrowser - built-in module
+# pathlib - built-in module
+
+# Type hints (built-in for Python 3.9+)
+# typing - built-in module
+
+# Optional development dependencies (uncomment if needed)
+# pytest>=7.0.0  # For testing
+# black>=23.0.0   # For code formatting
+# flake8>=6.0.0   # For linting
+# mypy>=1.0.0     # For type checking
+
+# Optional packaging dependencies (uncomment if building executable)
+# pyinstaller>=5.0  # For creating executables
+# cx-freeze>=6.0    # Alternative to PyInstaller
