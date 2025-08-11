@@ -1,0 +1,5 @@
+pytesseract==0.3.10
+PyQt6==6.7.0
+deep-translator==1.11.4
+Pillow==10.4.0
+
