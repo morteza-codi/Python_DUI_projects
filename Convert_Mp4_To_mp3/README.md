@@ -28,3 +28,28 @@ A fast and user-friendly desktop application for converting MP4 video files to h
 3. Install required dependencies:
    ```bash
    pip install -r requirements.txt
+
+## 🚀 Usage
+
+1.  Run the application:
+    ```bash
+    python main.py
+    ```
+2.  Click the **"Select MP4 File"** button to choose your MP4 file.
+3.  The conversion will start automatically.
+4.  The progress will be displayed in the progress bar and the log window.
+5.  The resulting MP3 file will be saved in the same directory as the source MP4 file.
+
+## 🖼️ Screenshots
+
+*(A screenshot of the application in action)*
+
+![Application Screenshot](https://user-images.githubusercontent.com/example/screenshot.png)
+
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome! Feel free to check the [issues page](https://github.com/your-username/your-repository/issues).
+
+## 📜 License
+
+Distributed under the MIT License. See
