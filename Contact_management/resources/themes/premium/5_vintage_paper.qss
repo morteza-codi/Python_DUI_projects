@@ -1,0 +1,116 @@
+ /* تم کاغذ قدیمی - با تن‌های سپیا */
+
+QMainWindow, QDialog {
+    background-color: #f5e9d6;
+    color: #5c4b3a;
+    font-family: 'Vazirmatn', 'Times New Roman', serif;
+    background-image: url(resources/images/paper_texture.png);
+    background-repeat: repeat;
+}
+
+QPushButton {
+    background-color: #dbc6a5;
+    color: #5c4b3a;
+    border: 2px solid #a08b70;
+    border-radius: 5px;
+    padding: 8px 16px;
+    font-weight: bold;
+    font-size: 14px;
+    font-family: 'Vazirmatn', 'Bookman Old Style', serif;
+}
+
+QPushButton:hover {
+    background-color: #e5d3b7;
+    border-color: #876e52;
+}
+
+QPushButton:pressed {
+    background-color: #c9b091;
+    border-color: #876e52;
+}
+
+QLineEdit, QTextEdit {
+    background-color: #f8f2e6;
+    color: #5c4b3a;
+    border: 1px solid #a08b70;
+    border-radius: 5px;
+    padding: 8px;
+    selection-background-color: #c9b091;
+    selection-color: #ffffff;
+    font-family: 'Vazirmatn', 'Bookman Old Style', serif;
+}
+
+QTableWidget {
+    background-color: #f8f2e6;
+    color: #5c4b3a;
+    gridline-color: #c9b091;
+    border: 2px solid #a08b70;
+    border-radius: 5px;
+    font-family: 'Vazirmatn', 'Bookman Old Style', serif;
+}
+
+QTableWidget::item:selected {
+    background-color: #c9b091;
+    color: #ffffff;
+}
+
+QHeaderView::section {
+    background-color: #dbc6a5;
+    color: #5c4b3a;
+    padding: 8px;
+    border: 1px solid #a08b70;
+    font-weight: bold;
+    font-family: 'Vazirmatn', 'Bookman Old Style', serif;
+}
+
+QLabel {
+    color: #5c4b3a;
+    font-weight: bold;
+    font-family: 'Vazirmatn', 'Bookman Old Style', serif;
+}
+
+QMenuBar {
+    background-color: #dbc6a5;
+    color: #5c4b3a;
+    border-bottom: 2px solid #a08b70;
+    font-family: 'Vazirmatn', 'Bookman Old Style', serif;
+}
+
+QMenuBar::item:selected {
+    background-color: #c9b091;
+    color: #ffffff;
+}
+
+QMenu {
+    background-color: #f5e9d6;
+    color: #5c4b3a;
+    border: 1px solid #a08b70;
+    font-family: 'Vazirmatn', 'Bookman Old Style', serif;
+}
+
+QMenu::item:selected {
+    background-color: #c9b091;
+    color: #ffffff;
+}
+
+QScrollBar:vertical {
+    border: 1px solid #a08b70;
+    background-color: #f5e9d6;
+    width: 10px;
+}
+
+QScrollBar::handle:vertical {
+    background-color: #c9b091;
+    min-height: 20px;
+    border-radius: 5px;
+}
+
+#textEdit {
+    background-color: #f8f2e6;
+    color: #876e52;
+    border: 1px solid #a08b70;
+    border-radius: 5px;
+    padding: 8px;
+    font-family: 'Vazirmatn', 'Bookman Old Style', serif;
+    font-style: italic;
+}

@@ -1,0 +1,137 @@
+ /* تم آب نبات رنگارنگ - ترکیب رنگ‌های شاد و درخشان */
+
+QMainWindow, QDialog {
+    background-color: #ffebff;
+    color: #5a3663;
+    font-family: 'Vazirmatn', 'Comic Sans MS', 'Arial', sans-serif;
+}
+
+QPushButton {
+    background-color: #ff77cc;
+    color: #ffffff;
+    border: none;
+    border-radius: 20px;
+    padding: 12px 24px;
+    font-weight: bold;
+    font-size: 16px;
+    box-shadow: 0 4px 0 #d35db3;
+}
+
+QPushButton:hover {
+    background-color: #ff88dd;
+    box-shadow: 0 6px 0 #d35db3;
+    transform: translateY(-2px);
+}
+
+QPushButton:pressed {
+    background-color: #e066b3;
+    box-shadow: 0 1px 0 #d35db3;
+    transform: translateY(3px);
+}
+
+QLineEdit, QTextEdit {
+    background-color: #ffffff;
+    color: #5a3663;
+    border: 3px solid #77ddff;
+    border-radius: 15px;
+    padding: 10px;
+    selection-background-color: #ffaaff;
+    selection-color: #5a3663;
+}
+
+QTableWidget {
+    background-color: #ffffff;
+    color: #5a3663;
+    gridline-color: #ddaaff;
+    border: 5px solid #ffaaff;
+    border-radius: 15px;
+    alternate-background-color: #f5f0ff;
+}
+
+QTableWidget::item:selected {
+    background-color: #ffaaff;
+    color: #ffffff;
+}
+
+QHeaderView::section {
+    background-color: #77ddff;
+    color: #ffffff;
+    padding: 10px;
+    border: 2px solid #ffebff;
+    font-weight: bold;
+    border-radius: 10px;
+}
+
+QLabel {
+    color: #5a3663;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+QMenuBar {
+    background-color: #ffaaff;
+    color: #5a3663;
+    border-bottom: 3px solid #77ddff;
+}
+
+QMenuBar::item:selected {
+    background-color: #77ddff;
+    color: #ffffff;
+    border-radius: 10px;
+}
+
+QMenu {
+    background-color: #ffebff;
+    color: #5a3663;
+    border: 2px solid #77ddff;
+    border-radius: 10px;
+}
+
+QMenu::item:selected {
+    background-color: #77ddff;
+    color: #ffffff;
+    border-radius: 8px;
+}
+
+QScrollBar:vertical {
+    border: none;
+    background-color: #ffebff;
+    width: 15px;
+    margin: 0px;
+}
+
+QScrollBar::handle:vertical {
+    background-color: #ffaaff;
+    border-radius: 7px;
+    min-height: 30px;
+    border: 2px solid #ff77cc;
+}
+
+QTabWidget::pane {
+    border: 3px solid #77ddff;
+    border-radius: 15px;
+    background-color: #ffffff;
+}
+
+QTabBar::tab {
+    background-color: #ffaaff;
+    color: #ffffff;
+    padding: 10px 20px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    margin-right: 5px;
+}
+
+QTabBar::tab:selected {
+    background-color: #ff77cc;
+}
+
+#textEdit {
+    background-color: #ffffff;
+    color: #ff77cc;
+    border: 3px solid #ffaaff;
+    border-radius: 15px;
+    padding: 10px;
+    font-weight: bold;
+    font-size: 16px;
+}

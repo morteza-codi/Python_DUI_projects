@@ -1,0 +1,123 @@
+ /* تم قهوه و خامه - با رنگ‌های گرم قهوه‌ای و کرمی */
+
+QMainWindow, QDialog {
+    background-color: #f3e9dc;
+    color: #4a3728;
+    font-family: 'Vazirmatn', 'Georgia', serif;
+}
+
+QPushButton {
+    background-color: #8d6e63;
+    color: #f3e9dc;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+QPushButton:hover {
+    background-color: #a18778;
+}
+
+QPushButton:pressed {
+    background-color: #6d5349;
+}
+
+QLineEdit, QTextEdit {
+    background-color: #ffffff;
+    color: #4a3728;
+    border: 2px solid #c8b7a6;
+    border-radius: 8px;
+    padding: 8px;
+    selection-background-color: #c8b7a6;
+    selection-color: #ffffff;
+}
+
+QTableWidget {
+    background-color: #ffffff;
+    color: #4a3728;
+    gridline-color: #e6d9cc;
+    border: 2px solid #c8b7a6;
+    border-radius: 8px;
+    alternate-background-color: #f9f5f1;
+}
+
+QTableWidget::item:selected {
+    background-color: #c8b7a6;
+    color: #4a3728;
+}
+
+QHeaderView::section {
+    background-color: #e6d9cc;
+    color: #4a3728;
+    padding: 8px;
+    border: 1px solid #c8b7a6;
+    font-weight: bold;
+}
+
+QLabel {
+    color: #4a3728;
+    font-weight: bold;
+}
+
+QMenuBar {
+    background-color: #e6d9cc;
+    color: #4a3728;
+    border-bottom: 2px solid #c8b7a6;
+}
+
+QMenuBar::item:selected {
+    background-color: #c8b7a6;
+}
+
+QMenu {
+    background-color: #f3e9dc;
+    color: #4a3728;
+    border: 1px solid #c8b7a6;
+}
+
+QMenu::item:selected {
+    background-color: #c8b7a6;
+}
+
+QScrollBar:vertical {
+    border: none;
+    background-color: #f3e9dc;
+    width: 10px;
+    margin: 0px;
+    border-radius: 5px;
+}
+
+QScrollBar::handle:vertical {
+    background-color: #c8b7a6;
+    border-radius: 5px;
+    min-height: 20px;
+}
+
+#textEdit {
+    background-color: #ffffff;
+    color: #8d6e63;
+    border: 2px solid #c8b7a6;
+    border-radius: 8px;
+    padding: 8px;
+    font-weight: bold;
+}
+
+/* طرح لکه قهوه */
+QMainWindow {
+    background-image: url(resources/images/coffee_stain.png);
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    background-origin: content;
+}
+
+/* استایل خاص برای دکمه‌های منتخب */
+QPushButton#btn_1, QPushButton#btn_8 {
+    background-color: #6d4c41;
+    color: #f3e9dc;
+}
+
+QPushButton#btn_1:hover, QPushButton#btn_8:hover {
+    background-color: #7d5b4f;
+}

@@ -1,0 +1,132 @@
+ /* تم شهر زمرد - با سایه‌های مختلف سبز و تزئینات طلایی */
+
+QMainWindow, QDialog {
+    background-color: qlineargradient(x1:0, y1:0, x2:1, y2:1, stop:0 #004d40, stop:1 #00796b);
+    color: #e0f2f1;
+    font-family: 'Vazirmatn', 'Segoe UI', 'Arial', sans-serif;
+}
+
+QPushButton {
+    background-color: #00897b;
+    color: #e0f2f1;
+    border: 2px solid #ffd700;
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+QPushButton:hover {
+    background-color: #009688;
+    border-color: #ffeb3b;
+}
+
+QPushButton:pressed {
+    background-color: #00796b;
+    border-color: #ffc400;
+}
+
+QLineEdit, QTextEdit {
+    background-color: rgba(0, 77, 64, 0.7);
+    color: #e0f2f1;
+    border: 2px solid #4db6ac;
+    border-radius: 8px;
+    padding: 8px;
+    selection-background-color: #4db6ac;
+    selection-color: #004d40;
+}
+
+QTableWidget {
+    background-color: rgba(0, 77, 64, 0.7);
+    color: #e0f2f1;
+    gridline-color: #00897b;
+    border: 2px solid #4db6ac;
+    border-radius: 8px;
+}
+
+QTableWidget::item:selected {
+    background-color: #4db6ac;
+    color: #004d40;
+}
+
+QHeaderView::section {
+    background-color: #004d40;
+    color: #4db6ac;
+    padding: 8px;
+    border: 1px solid #00897b;
+    font-weight: bold;
+}
+
+QLabel {
+    color: #e0f2f1;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+QMenuBar {
+    background-color: #004d40;
+    color: #e0f2f1;
+    border-bottom: 2px solid #ffd700;
+}
+
+QMenuBar::item:selected {
+    background-color: #00897b;
+}
+
+QMenu {
+    background-color: #004d40;
+    color: #e0f2f1;
+    border: 1px solid #ffd700;
+}
+
+QMenu::item:selected {
+    background-color: #00897b;
+}
+
+QScrollBar:vertical {
+    border: none;
+    background-color: #004d40;
+    width: 10px;
+    margin: 0px;
+    border-radius: 5px;
+}
+
+QScrollBar::handle:vertical {
+    background-color: #4db6ac;
+    border-radius: 5px;
+    min-height: 20px;
+}
+
+#textEdit {
+    background-color: rgba(0, 77, 64, 0.5);
+    color: #b2dfdb;
+    border: 2px solid #ffd700;
+    border-radius: 8px;
+    padding: 8px;
+    font-weight: bold;
+}
+
+/* تزئینات زمردی */
+QMainWindow {
+    border: 5px solid #ffd700;
+    border-radius: 10px;
+}
+
+/* استایل خاص برای دکمه‌های منتخب */
+QPushButton#btn_1, QPushButton#btn_8 {
+    background-color: #004d40;
+    color: #ffd700;
+    border: 2px solid #ffd700;
+}
+
+QPushButton#btn_1:hover, QPushButton#btn_8:hover {
+    background-color: #00695c;
+    color: #ffeb3b;
+}
+
+/* طرح زمرد برای پس‌زمینه */
+QMainWindow {
+    background-image: url(resources/images/emerald_pattern.png);
+    background-repeat: repeat;
+    background-blend-mode: overlay;
+}

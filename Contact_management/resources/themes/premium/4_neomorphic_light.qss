@@ -1,0 +1,106 @@
+ /* تم نیومورفیک روشن - با سایه‌های نرم */
+
+QMainWindow, QDialog {
+    background-color: #e0e5ec;
+    color: #1e1e2e;
+    font-family: 'Vazirmatn', 'Segoe UI', 'Arial', sans-serif;
+}
+
+QPushButton {
+    background-color: #e0e5ec;
+    color: #5a6b8c;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    font-weight: bold;
+    font-size: 14px;
+    qproperty-flat: false;
+}
+
+QPushButton {
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #e0e5ec, stop:1 #e0e5ec);
+    box-shadow: 6px 6px 12px #b8b9be, -6px -6px 12px #ffffff;
+}
+
+QPushButton:hover {
+    background-color: #e6ecf3;
+    color: #3f5787;
+}
+
+QPushButton:pressed {
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #dadeea, stop:1 #dadeea);
+    box-shadow: inset 4px 4px 8px #b8b9be, inset -4px -4px 8px #ffffff;
+}
+
+QLineEdit, QTextEdit {
+    background-color: #e0e5ec;
+    color: #1e1e2e;
+    border: none;
+    border-radius: 10px;
+    padding: 8px;
+    selection-background-color: #a2b3d0;
+    selection-color: #ffffff;
+    box-shadow: inset 2px 2px 5px #b8b9be, inset -2px -2px 5px #ffffff;
+}
+
+QTableWidget {
+    background-color: #e0e5ec;
+    color: #1e1e2e;
+    gridline-color: #c9d1dd;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 4px 4px 8px #b8b9be, -4px -4px 8px #ffffff;
+}
+
+QTableWidget::item:selected {
+    background-color: #a2b3d0;
+    color: #ffffff;
+}
+
+QHeaderView::section {
+    background-color: #e0e5ec;
+    color: #5a6b8c;
+    padding: 8px;
+    border: none;
+    font-weight: bold;
+}
+
+QLabel {
+    color: #5a6b8c;
+    font-weight: bold;
+}
+
+QMenuBar {
+    background-color: #e0e5ec;
+    color: #5a6b8c;
+    border-bottom: 1px solid #c9d1dd;
+}
+
+QMenuBar::item:selected {
+    background-color: #a2b3d0;
+    color: #ffffff;
+    border-radius: 5px;
+}
+
+QMenu {
+    background-color: #e0e5ec;
+    color: #5a6b8c;
+    border: 1px solid #c9d1dd;
+    border-radius: 8px;
+    box-shadow: 4px 4px 8px #b8b9be, -4px -4px 8px #ffffff;
+}
+
+QMenu::item:selected {
+    background-color: #a2b3d0;
+    color: #ffffff;
+    border-radius: 5px;
+}
+
+#textEdit {
+    background-color: #e0e5ec;
+    color: #5a6b8c;
+    border: none;
+    border-radius: 10px;
+    padding: 8px;
+    box-shadow: inset 2px 2px 5px #b8b9be, inset -2px -2px 5px #ffffff;
+}

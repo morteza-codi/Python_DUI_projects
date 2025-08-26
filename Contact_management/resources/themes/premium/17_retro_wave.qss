@@ -1,0 +1,135 @@
+ /* تم رترو ویو - با رنگ‌های نئونی بنفش، صورتی و آبی */
+
+QMainWindow, QDialog {
+    background-color: #1a1a2e;
+    color: #e0e0e0;
+    font-family: 'Vazirmatn', 'VCR OSD Mono', 'Segoe UI', sans-serif;
+    background-image: url(resources/images/grid_bg.png);
+    background-repeat: repeat;
+}
+
+QPushButton {
+    background-color: #272744;
+    color: #ff2a6d;
+    border: 2px solid #ff2a6d;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-weight: bold;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+QPushButton:hover {
+    background-color: #ff2a6d;
+    color: #272744;
+}
+
+QPushButton:pressed {
+    background-color: #cc2257;
+    color: #272744;
+    border-color: #cc2257;
+}
+
+QLineEdit, QTextEdit {
+    background-color: #272744;
+    color: #66fcf1;
+    border: 2px solid #5f1bb0;
+    border-radius: 5px;
+    padding: 8px;
+    selection-background-color: #5f1bb0;
+    selection-color: #ffffff;
+    font-family: 'Vazirmatn', 'VCR OSD Mono', monospace;
+}
+
+QTableWidget {
+    background-color: #272744;
+    color: #e0e0e0;
+    gridline-color: #5f1bb0;
+    border: 2px solid #5f1bb0;
+    border-radius: 5px;
+}
+
+QTableWidget::item:selected {
+    background-color: #ff2a6d;
+    color: #e0e0e0;
+}
+
+QHeaderView::section {
+    background-color: #1a1a2e;
+    color: #66fcf1;
+    padding: 8px;
+    border: 1px solid #5f1bb0;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+QLabel {
+    color: #e0e0e0;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(255, 42, 109, 0.5);
+}
+
+QMenuBar {
+    background-color: #1a1a2e;
+    color: #e0e0e0;
+    border-bottom: 2px solid #ff2a6d;
+}
+
+QMenuBar::item:selected {
+    background-color: #ff2a6d;
+    color: #1a1a2e;
+}
+
+QMenu {
+    background-color: #1a1a2e;
+    color: #e0e0e0;
+    border: 1px solid #ff2a6d;
+}
+
+QMenu::item:selected {
+    background-color: #ff2a6d;
+    color: #1a1a2e;
+}
+
+QScrollBar:vertical {
+    border: none;
+    background-color: #1a1a2e;
+    width: 10px;
+    margin: 0px;
+}
+
+QScrollBar::handle:vertical {
+    background-color: #ff2a6d;
+    border-radius: 5px;
+    min-height: 20px;
+}
+
+#textEdit {
+    background-color: #272744;
+    color: #66fcf1;
+    border: 2px solid #ff2a6d;
+    border-radius: 5px;
+    padding: 8px;
+    font-weight: bold;
+    font-family: 'Vazirmatn', 'VCR OSD Mono', monospace;
+}
+
+/* خط افقی رترو */
+QMainWindow::after {
+    content: "";
+    height: 2px;
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:0, stop:0 #ff2a6d, stop:0.5 #66fcf1, stop:1 #5f1bb0);
+    position: absolute;
+    bottom: 30%;
+    left: 0;
+    right: 0;
+}
+
+/* خورشید سانتی رترو */
+QMainWindow::before {
+    content: "";
+    background-image: url(resources/images/retro_sun.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.5;
+}

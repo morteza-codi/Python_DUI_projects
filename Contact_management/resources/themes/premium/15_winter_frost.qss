@@ -1,0 +1,128 @@
+ /* تم یخبندان زمستانی - با رنگ‌های آبی یخی و سفید */
+
+QMainWindow, QDialog {
+    background-color: qlineargradient(x1:0, y1:0, x2:1, y2:1, stop:0 #e4f1fe, stop:1 #cae0f9);
+    color: #2a4d69;
+    font-family: 'Vazirmatn', 'Segoe UI', 'Arial', sans-serif;
+    background-image: url(resources/images/snowflake_bg.png);
+    background-repeat: repeat;
+}
+
+QPushButton {
+    background-color: #adcbe3;
+    color: #2a4d69;
+    border: 2px solid #63a4db;
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+QPushButton:hover {
+    background-color: #c3daed;
+    border-color: #4a90cd;
+}
+
+QPushButton:pressed {
+    background-color: #82b3d9;
+    border-color: #3f86c8;
+}
+
+QLineEdit, QTextEdit {
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #2a4d69;
+    border: 1px solid #63a4db;
+    border-radius: 8px;
+    padding: 8px;
+    selection-background-color: #63a4db;
+    selection-color: #ffffff;
+}
+
+QTableWidget {
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #2a4d69;
+    gridline-color: #c3daed;
+    border: 2px solid #63a4db;
+    border-radius: 8px;
+}
+
+QTableWidget::item:selected {
+    background-color: #63a4db;
+    color: #ffffff;
+}
+
+QHeaderView::section {
+    background-color: #adcbe3;
+    color: #2a4d69;
+    padding: 8px;
+    border: 1px solid #63a4db;
+    font-weight: bold;
+}
+
+QLabel {
+    color: #2a4d69;
+    font-weight: bold;
+}
+
+QMenuBar {
+    background-color: #adcbe3;
+    color: #2a4d69;
+    border-bottom: 2px solid #63a4db;
+}
+
+QMenuBar::item:selected {
+    background-color: #63a4db;
+    color: #ffffff;
+}
+
+QMenu {
+    background-color: #e4f1fe;
+    color: #2a4d69;
+    border: 1px solid #63a4db;
+}
+
+QMenu::item:selected {
+    background-color: #63a4db;
+    color: #ffffff;
+}
+
+QScrollBar:vertical {
+    border: none;
+    background-color: #e4f1fe;
+    width: 10px;
+    margin: 0px;
+}
+
+QScrollBar::handle:vertical {
+    background-color: #adcbe3;
+    border: 1px solid #63a4db;
+    border-radius: 5px;
+    min-height: 20px;
+}
+
+#textEdit {
+    background-color: rgba(255, 255, 255, 0.7);
+    color: #4a90cd;
+    border: 2px solid #63a4db;
+    border-radius: 8px;
+    padding: 8px;
+    font-weight: bold;
+}
+
+/* افکت برفی */
+QMainWindow::before {
+    content: "";
+    background-image: url(resources/images/snow_overlay.png);
+    background-repeat: repeat-x;
+    background-position: top;
+    opacity: 0.7;
+}
+
+/* دکوراسیون ویژه برای دکمه‌ها */
+QPushButton {
+    background-image: url(resources/images/ice_crystal.png);
+    background-repeat: no-repeat;
+    background-position: right;
+    background-origin: content;
+    padding-right: 30px;
+}

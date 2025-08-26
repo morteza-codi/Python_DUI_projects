@@ -1,0 +1,114 @@
+ /* تم بادهای صحرا - با رنگ‌های گرم شنی و الگوهای شبیه به باد */
+
+QMainWindow, QDialog {
+    background-color: qlineargradient(x1:0, y1:0, x2:1, y2:1, stop:0 #e8d5b7, stop:0.5 #e0c9a6, stop:1 #d4bc94);
+    color: #6b4226;
+    font-family: 'Vazirmatn', 'Segoe UI', 'Arial', sans-serif;
+}
+
+QPushButton {
+    background-color: #c1994d;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-weight: bold;
+    font-size: 14px;
+    border: 1px solid #a67c3d;
+}
+
+QPushButton:hover {
+    background-color: #d8ac57;
+}
+
+QPushButton:pressed {
+    background-color: #a67c3d;
+}
+
+QLineEdit, QTextEdit {
+    background-color: #f5eee3;
+    color: #6b4226;
+    border: 2px solid #c1994d;
+    border-radius: 8px;
+    padding: 8px;
+    selection-background-color: #d8ac57;
+    selection-color: #ffffff;
+}
+
+QTableWidget {
+    background-color: rgba(245, 238, 227, 0.8);
+    color: #6b4226;
+    gridline-color: #d5bc88;
+    border: 2px solid #c1994d;
+    border-radius: 8px;
+}
+
+QTableWidget::item:selected {
+    background-color: #c1994d;
+    color: #ffffff;
+}
+
+QHeaderView::section {
+    background-color: #d5bc88;
+    color: #6b4226;
+    padding: 8px;
+    border: 1px solid #c1994d;
+    font-weight: bold;
+}
+
+QLabel {
+    color: #6b4226;
+    font-weight: bold;
+}
+
+QMenuBar {
+    background-color: qlineargradient(x1:0, y1:0, x2:1, y2:0, stop:0 #d5bc88, stop:1 #c1994d);
+    color: #ffffff;
+}
+
+QMenuBar::item:selected {
+    background-color: #a67c3d;
+    color: #ffffff;
+}
+
+QMenu {
+    background-color: #f5eee3;
+    color: #6b4226;
+    border: 1px solid #c1994d;
+}
+
+QMenu::item:selected {
+    background-color: #c1994d;
+    color: #ffffff;
+}
+
+QScrollBar:vertical {
+    border: none;
+    background-color: #f5eee3;
+    width: 10px;
+    margin: 0px;
+}
+
+QScrollBar::handle:vertical {
+    background-color: #c1994d;
+    border-radius: 5px;
+    min-height: 20px;
+}
+
+#textEdit {
+    background-color: rgba(245, 238, 227, 0.6);
+    color: #8b5a2b;
+    border: 2px solid #c1994d;
+    border-radius: 8px;
+    padding: 8px;
+    font-weight: bold;
+    background-image: url(resources/images/sand_pattern.png);
+    background-repeat: repeat-x;
+    background-position: bottom;
+}
+
+/* طرح صحرا برای حاشیه‌ها */
+QMainWindow {
+    border-image: url(resources/images/desert_border.png) 30 30 30 30 stretch stretch;
+    border-width: 30px;
+}

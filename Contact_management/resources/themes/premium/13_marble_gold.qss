@@ -1,0 +1,129 @@
+ /* تم مرمر و طلا - سبک لوکس با تزئینات طلایی */
+
+QMainWindow, QDialog {
+    background-color: #f2f2f2;
+    color: #1a1a1a;
+    font-family: 'Vazirmatn', 'Times New Roman', serif;
+    background-image: url(resources/images/marble_bg.png);
+    background-repeat: repeat;
+}
+
+QPushButton {
+    background-color: #ffffff;
+    color: #1a1a1a;
+    border: 2px solid #d4af37;
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+QPushButton:hover {
+    background-color: #f9f2d3;
+    border-color: #f2ca50;
+}
+
+QPushButton:pressed {
+    background-color: #dbd1a0;
+    border-color: #b7942c;
+}
+
+QLineEdit, QTextEdit {
+    background-color: #ffffff;
+    color: #1a1a1a;
+    border: 1px solid #d4af37;
+    border-radius: 8px;
+    padding: 8px;
+    selection-background-color: #d4af37;
+    selection-color: #ffffff;
+}
+
+QTableWidget {
+    background-color: #ffffff;
+    color: #1a1a1a;
+    gridline-color: #d9d9d9;
+    border: 2px solid #d4af37;
+    border-radius: 8px;
+}
+
+QTableWidget::item:selected {
+    background-color: #d4af37;
+    color: #ffffff;
+}
+
+QHeaderView::section {
+    background-color: #f2f2f2;
+    color: #1a1a1a;
+    padding: 8px;
+    border: 1px solid #d4af37;
+    font-weight: bold;
+}
+
+QLabel {
+    color: #1a1a1a;
+    font-weight: bold;
+}
+
+QMenuBar {
+    background-color: #ffffff;
+    color: #1a1a1a;
+    border-bottom: 2px solid #d4af37;
+}
+
+QMenuBar::item:selected {
+    background-color: #d4af37;
+    color: #ffffff;
+}
+
+QMenu {
+    background-color: #ffffff;
+    color: #1a1a1a;
+    border: 1px solid #d4af37;
+}
+
+QMenu::item:selected {
+    background-color: #d4af37;
+    color: #ffffff;
+}
+
+QScrollBar:vertical {
+    border: none;
+    background-color: #f2f2f2;
+    width: 10px;
+    margin: 0px;
+}
+
+QScrollBar::handle:vertical {
+    background-color: #d4af37;
+    border-radius: 5px;
+    min-height: 20px;
+}
+
+#textEdit {
+    background-color: #ffffff;
+    color: #d4af37;
+    border: 2px solid #d4af37;
+    border-radius: 8px;
+    padding: 8px;
+    font-weight: bold;
+    font-style: italic;
+}
+
+/* تزئینات طلایی */
+QMainWindow {
+    border: 10px solid #d4af37;
+    border-image: url(resources/images/gold_frame.png) 30 30 30 30 stretch stretch;
+    border-width: 30px;
+}
+
+/* دکمه‌های ویژه */
+QPushButton#btn_1, QPushButton#btn_8 {
+    background-color: #d4af37;
+    color: #ffffff;
+    border: 2px solid #b7942c;
+}
+
+QPushButton#btn_1:hover, QPushButton#btn_8:hover {
+    background-color: #f2ca50;
+    color: #1a1a1a;
+}

@@ -1,0 +1,67 @@
+/* تم روشن صورتی */
+
+QMainWindow, QDialog {
+    background-color: #fff5f7;
+    color: #702459;
+    font-family: 'Vazirmatn', 'Segoe UI', 'Arial', sans-serif;
+}
+
+QPushButton {
+    background-color: #d53f8c;
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    padding: 8px 16px;
+    font-weight: bold;
+}
+
+QPushButton:hover {
+    background-color: #eb5286;
+}
+
+QPushButton:pressed {
+    background-color: #b83280;
+}
+
+QLineEdit, QTextEdit {
+    background-color: #ffffff;
+    color: #702459;
+    border: 1px solid #fbb6ce;
+    border-radius: 6px;
+    padding: 6px;
+    selection-background-color: #d53f8c;
+    selection-color: #ffffff;
+}
+
+QTableWidget {
+    background-color: #ffffff;
+    color: #702459;
+    gridline-color: #fbb6ce;
+    border: 1px solid #fbb6ce;
+    border-radius: 6px;
+}
+
+QTableWidget::item:selected {
+    background-color: #d53f8c;
+    color: #ffffff;
+}
+
+QHeaderView::section {
+    background-color: #fff5f7;
+    color: #702459;
+    padding: 6px;
+    border: none;
+    font-weight: bold;
+}
+
+QLabel {
+    color: #702459;
+}
+
+#textEdit {
+    background-color: #ffffff;
+    color: #d53f8c;
+    border: 1px solid #fbb6ce;
+    border-radius: 6px;
+    padding: 6px;
+} 

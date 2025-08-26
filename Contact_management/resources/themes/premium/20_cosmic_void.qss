@@ -1,0 +1,126 @@
+ /* تم خلاء کیهانی - با رنگ‌های فضای عمیق و افکت‌های سحابی */
+
+QMainWindow, QDialog {
+    background-color: #050118;
+    color: #e0e0ff;
+    font-family: 'Vazirmatn', 'Segoe UI', 'Arial', sans-serif;
+    background-image: url(resources/images/nebula_bg.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+QPushButton {
+    background-color: rgba(61, 20, 102, 0.8);
+    color: #d1c4e9;
+    border: 2px solid #7c4dff;
+    border-radius: 10px;
+    padding: 10px 20px;
+    font-weight: bold;
+    font-size: 14px;
+    text-shadow: 0px 0px 5px rgba(124, 77, 255, 0.5);
+}
+
+QPushButton:hover {
+    background-color: rgba(81, 45, 168, 0.8);
+    border-color: #b388ff;
+    box-shadow: 0 0 15px #7c4dff;
+}
+
+QPushButton:pressed {
+    background-color: rgba(49, 27, 89, 0.8);
+    border-color: #651fff;
+}
+
+QLineEdit, QTextEdit {
+    background-color: rgba(25, 12, 43, 0.7);
+    color: #d1c4e9;
+    border: 2px solid #7c4dff;
+    border-radius: 10px;
+    padding: 8px;
+    selection-background-color: #7c4dff;
+    selection-color: #050118;
+}
+
+QTableWidget {
+    background-color: rgba(25, 12, 43, 0.7);
+    color: #d1c4e9;
+    gridline-color: #3d1466;
+    border: 2px solid #7c4dff;
+    border-radius: 10px;
+}
+
+QTableWidget::item:selected {
+    background-color: rgba(124, 77, 255, 0.7);
+    color: #ffffff;
+}
+
+QHeaderView::section {
+    background-color: rgba(61, 20, 102, 0.8);
+    color: #d1c4e9;
+    padding: 8px;
+    border: 1px solid #7c4dff;
+    font-weight: bold;
+}
+
+QLabel {
+    color: #d1c4e9;
+    font-weight: bold;
+    text-shadow: 0px 0px 8px rgba(124, 77, 255, 0.5);
+}
+
+QMenuBar {
+    background-color: rgba(25, 12, 43, 0.9);
+    color: #d1c4e9;
+    border-bottom: 2px solid #7c4dff;
+}
+
+QMenuBar::item:selected {
+    background-color: rgba(124, 77, 255, 0.7);
+}
+
+QMenu {
+    background-color: rgba(25, 12, 43, 0.9);
+    color: #d1c4e9;
+    border: 1px solid #7c4dff;
+}
+
+QMenu::item:selected {
+    background-color: rgba(124, 77, 255, 0.7);
+}
+
+QScrollBar:vertical {
+    border: none;
+    background-color: rgba(25, 12, 43, 0.5);
+    width: 10px;
+    margin: 0px;
+    border-radius: 5px;
+}
+
+QScrollBar::handle:vertical {
+    background-color: rgba(124, 77, 255, 0.7);
+    border-radius: 5px;
+    min-height: 20px;
+}
+
+#textEdit {
+    background-color: rgba(25, 12, 43, 0.5);
+    color: #b39ddb;
+    border: 2px solid #7c4dff;
+    border-radius: 10px;
+    padding: 8px;
+    font-weight: bold;
+}
+
+/* افکت ستاره‌ها */
+QMainWindow::after {
+    content: "";
+    background-image: url(resources/images/stars_overlay.png);
+    background-repeat: repeat;
+    opacity: 0.8;
+}
+
+/* افکت درخشش برای دکمه‌ها */
+QPushButton {
+    box-shadow: 0 0 15px rgba(124, 77, 255, 0.5);
+}

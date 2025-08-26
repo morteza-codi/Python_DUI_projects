@@ -1,0 +1,138 @@
+ /* تم نئون الکتریکی - با رنگ‌های درخشان و افکت‌های تابان */
+
+QMainWindow, QDialog {
+    background-color: #0c0c0c;
+    color: #ffffff;
+    font-family: 'Vazirmatn', 'Segoe UI', 'Arial', sans-serif;
+}
+
+QPushButton {
+    background-color: #0c0c0c;
+    color: #11f1fc;
+    border: 2px solid #11f1fc;
+    border-radius: 6px;
+    padding: 10px 20px;
+    font-weight: bold;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+QPushButton:hover {
+    background-color: #11f1fc;
+    color: #0c0c0c;
+    border: 2px solid #11f1fc;
+    box-shadow: 0 0 20px #11f1fc;
+}
+
+QPushButton:pressed {
+    background-color: #0baab2;
+    color: #0c0c0c;
+    border: 2px solid #0baab2;
+}
+
+QLineEdit, QTextEdit {
+    background-color: #1a1a1a;
+    color: #ff2dfb;
+    border: 2px solid #ff2dfb;
+    border-radius: 6px;
+    padding: 8px;
+    selection-background-color: #ff2dfb;
+    selection-color: #0c0c0c;
+}
+
+QLineEdit:focus, QTextEdit:focus {
+    border: 2px solid #ff2dfb;
+    box-shadow: 0 0 10px #ff2dfb;
+}
+
+QTableWidget {
+    background-color: #1a1a1a;
+    color: #ffffff;
+    gridline-color: #333333;
+    border: 2px solid #bc13fe;
+    border-radius: 6px;
+}
+
+QTableWidget::item:selected {
+    background-color: #bc13fe;
+    color: #ffffff;
+}
+
+QHeaderView::section {
+    background-color: #0c0c0c;
+    color: #11f1fc;
+    padding: 8px;
+    border: 1px solid #11f1fc;
+    font-weight: bold;
+}
+
+QLabel {
+    color: #ffffff;
+    font-weight: bold;
+    text-shadow: 0 0 8px #ffffff;
+}
+
+QMenuBar {
+    background-color: #0c0c0c;
+    color: #ffffff;
+    border-bottom: 2px solid #11f1fc;
+}
+
+QMenuBar::item:selected {
+    background-color: #11f1fc;
+    color: #0c0c0c;
+}
+
+QMenu {
+    background-color: #0c0c0c;
+    color: #ffffff;
+    border: 1px solid #11f1fc;
+}
+
+QMenu::item:selected {
+    background-color: #11f1fc;
+    color: #0c0c0c;
+}
+
+QScrollBar:vertical {
+    border: none;
+    background-color: #0c0c0c;
+    width: 10px;
+    margin: 0px;
+}
+
+QScrollBar::handle:vertical {
+    background-color: #11f1fc;
+    border-radius: 5px;
+    min-height: 20px;
+}
+
+#textEdit {
+    background-color: #1a1a1a;
+    color: #11f1fc;
+    border: 2px solid #bc13fe;
+    border-radius: 6px;
+    padding: 8px;
+    font-weight: bold;
+}
+
+/* استایل خاص برای منوی بالا */
+QMenuBar {
+    background-color: #0c0c0c;
+    border-bottom: 2px solid #11f1fc;
+    box-shadow: 0 0 20px #11f1fc;
+}
+
+/* استایل خاص برای دکمه‌های با اولویت */
+QPushButton#btn_1, QPushButton#btn_8 {
+    background-color: #0c0c0c;
+    color: #ff2dfb;
+    border: 2px solid #ff2dfb;
+}
+
+QPushButton#btn_1:hover, QPushButton#btn_8:hover {
+    background-color: #ff2dfb;
+    color: #0c0c0c;
+    box-shadow: 0 0 20px #ff2dfb;
+}

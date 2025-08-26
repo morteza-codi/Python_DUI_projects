@@ -1,0 +1,112 @@
+ /* تم رویاهای جنگل - ترکیب رنگ‌های سبز و قهوه‌ای طبیعی */
+
+QMainWindow, QDialog {
+    background-color: qlineargradient(x1:0, y1:0, x2:1, y2:1, stop:0 #2d3b2d, stop:1 #354526);
+    color: #e9e3cb;
+    font-family: 'Vazirmatn', 'Segoe UI', 'Arial', sans-serif;
+}
+
+QPushButton {
+    background-color: #5a7247;
+    color: #f7edda;
+    border: 2px solid #8a9a5b;
+    border-radius: 8px;
+    padding: 10px 18px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+QPushButton:hover {
+    background-color: #6b8155;
+    border-color: #a2b576;
+}
+
+QPushButton:pressed {
+    background-color: #48593a;
+    border-color: #8a9a5b;
+}
+
+QLineEdit, QTextEdit {
+    background-color: rgba(249, 240, 219, 0.12);
+    color: #f7edda;
+    border: 2px solid #8a9a5b;
+    border-radius: 8px;
+    padding: 8px;
+    selection-background-color: #8a9a5b;
+    selection-color: #ffffff;
+}
+
+QTableWidget {
+    background-color: rgba(53, 69, 38, 0.7);
+    color: #f7edda;
+    gridline-color: #5a7247;
+    border: 2px solid #5a7247;
+    border-radius: 8px;
+}
+
+QTableWidget::item:selected {
+    background-color: #8a9a5b;
+    color: #ffffff;
+}
+
+QHeaderView::section {
+    background-color: #48593a;
+    color: #f7edda;
+    padding: 8px;
+    border: 1px solid #5a7247;
+    font-weight: bold;
+}
+
+QLabel {
+    color: #f7edda;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+QMenuBar {
+    background-color: #2d3b2d;
+    color: #f7edda;
+    border-bottom: 2px solid #5a7247;
+}
+
+QMenuBar::item:selected {
+    background-color: #5a7247;
+}
+
+QMenu {
+    background-color: #2d3b2d;
+    color: #f7edda;
+    border: 1px solid #5a7247;
+}
+
+QMenu::item:selected {
+    background-color: #5a7247;
+}
+
+QScrollBar:vertical {
+    border: none;
+    background-color: #2d3b2d;
+    width: 10px;
+    margin: 0px;
+}
+
+QScrollBar::handle:vertical {
+    background-color: #5a7247;
+    border-radius: 5px;
+    min-height: 20px;
+}
+
+#textEdit {
+    background-color: rgba(93, 109, 68, 0.3);
+    color: #c1d8a3;
+    border: 2px solid #5a7247;
+    border-radius: 8px;
+    padding: 8px;
+    font-weight: bold;
+}
+
+/* کادر دور جدول‌ها با طرح برگ */
+QTableWidget {
+    border-image: url(resources/images/leaf_border.png) 30 30 30 30 stretch stretch;
+    border-width: 30px;
+}

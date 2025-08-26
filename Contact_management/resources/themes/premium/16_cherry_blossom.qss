@@ -1,0 +1,126 @@
+ /* تم شکوفه گیلاس - با رنگ‌های صورتی ملایم و سفید */
+
+QMainWindow, QDialog {
+    background-color: #fff6f6;
+    color: #674c47;
+    font-family: 'Vazirmatn', 'Segoe UI', 'Arial', sans-serif;
+    background-image: url(resources/images/cherry_blossom_bg.png);
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    background-origin: content;
+}
+
+QPushButton {
+    background-color: #ffb7c5;
+    color: #674c47;
+    border: none;
+    border-radius: 15px;
+    padding: 10px 20px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+QPushButton:hover {
+    background-color: #ffc9d5;
+}
+
+QPushButton:pressed {
+    background-color: #fa96a9;
+}
+
+QLineEdit, QTextEdit {
+    background-color: #ffffff;
+    color: #674c47;
+    border: 2px solid #ffb7c5;
+    border-radius: 10px;
+    padding: 8px;
+    selection-background-color: #ffb7c5;
+    selection-color: #674c47;
+}
+
+QTableWidget {
+    background-color: #ffffff;
+    color: #674c47;
+    gridline-color: #ffe1e7;
+    border: 2px solid #ffb7c5;
+    border-radius: 10px;
+    alternate-background-color: #fff6f6;
+}
+
+QTableWidget::item:selected {
+    background-color: #ffb7c5;
+    color: #674c47;
+}
+
+QHeaderView::section {
+    background-color: #ffdee5;
+    color: #674c47;
+    padding: 8px;
+    border: 1px solid #ffb7c5;
+    font-weight: bold;
+}
+
+QLabel {
+    color: #674c47;
+    font-weight: bold;
+}
+
+QMenuBar {
+    background-color: #ffdee5;
+    color: #674c47;
+    border-bottom: 2px solid #ffb7c5;
+}
+
+QMenuBar::item:selected {
+    background-color: #ffb7c5;
+}
+
+QMenu {
+    background-color: #fff6f6;
+    color: #674c47;
+    border: 1px solid #ffb7c5;
+    border-radius: 5px;
+}
+
+QMenu::item:selected {
+    background-color: #ffb7c5;
+}
+
+QScrollBar:vertical {
+    border: none;
+    background-color: #fff6f6;
+    width: 10px;
+    margin: 0px;
+    border-radius: 5px;
+}
+
+QScrollBar::handle:vertical {
+    background-color: #ffb7c5;
+    border-radius: 5px;
+    min-height: 20px;
+}
+
+#textEdit {
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #db7093;
+    border: 2px solid #ffb7c5;
+    border-radius: 10px;
+    padding: 8px;
+    font-weight: bold;
+}
+
+/* تزئینات شکوفه گیلاس */
+QMainWindow {
+    border-image: url(resources/images/cherry_border.png) 30 30 30 30 stretch stretch;
+    border-width: 30px;
+}
+
+/* استایل خاص برای دکمه‌های منتخب */
+QPushButton#btn_1, QPushButton#btn_5 {
+    background-color: #db7093;
+    color: #ffffff;
+}
+
+QPushButton#btn_1:hover, QPushButton#btn_5:hover {
+    background-color: #e992ad;
+}

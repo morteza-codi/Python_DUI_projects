@@ -1,0 +1,67 @@
+/* تم تاریک خاکستری */
+
+QMainWindow, QDialog {
+    background-color: #121212;
+    color: #e0e0e0;
+    font-family: 'Vazirmatn', 'Segoe UI', 'Arial', sans-serif;
+}
+
+QPushButton {
+    background-color: #757575;
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    padding: 8px 16px;
+    font-weight: bold;
+}
+
+QPushButton:hover {
+    background-color: #9e9e9e;
+}
+
+QPushButton:pressed {
+    background-color: #616161;
+}
+
+QLineEdit, QTextEdit {
+    background-color: #1e1e1e;
+    color: #e0e0e0;
+    border: 1px solid #424242;
+    border-radius: 6px;
+    padding: 6px;
+    selection-background-color: #757575;
+    selection-color: #ffffff;
+}
+
+QTableWidget {
+    background-color: #1e1e1e;
+    color: #e0e0e0;
+    gridline-color: #424242;
+    border: 1px solid #424242;
+    border-radius: 6px;
+}
+
+QTableWidget::item:selected {
+    background-color: #757575;
+    color: #ffffff;
+}
+
+QHeaderView::section {
+    background-color: #2a2a2a;
+    color: #e0e0e0;
+    padding: 6px;
+    border: none;
+    font-weight: bold;
+}
+
+QLabel {
+    color: #e0e0e0;
+}
+
+#textEdit {
+    background-color: #1e1e1e;
+    color: #bdbdbd;
+    border: 1px solid #424242;
+    border-radius: 6px;
+    padding: 6px;
+} 

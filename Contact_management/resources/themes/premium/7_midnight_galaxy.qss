@@ -1,0 +1,108 @@
+ /* تم کهکشان نیمه‌شب - ترکیب آبی و بنفش تیره با نقاط ستاره‌ای */
+
+QMainWindow, QDialog {
+    background-color: #0a0b1a;
+    color: #e0e0ff;
+    font-family: 'Vazirmatn', 'Segoe UI', 'Arial', sans-serif;
+    background-image: url(resources/images/stars_bg.png);
+    background-repeat: repeat;
+}
+
+QPushButton {
+    background-color: qlineargradient(x1:0, y1:0, x2:1, y2:1, stop:0 #2e1f5e, stop:1 #4b2d73);
+    color: #ffffff;
+    border: none;
+    border-radius: 12px;
+    padding: 10px 20px;
+    font-weight: bold;
+    font-size: 14px;
+    text-shadow: 0px 0px 5px rgba(255, 255, 255, 0.5);
+}
+
+QPushButton:hover {
+    background-color: qlineargradient(x1:0, y1:0, x2:1, y2:1, stop:0 #3a2873, stop:1 #5a3789);
+    box-shadow: 0 0 15px #9d6ad8;
+}
+
+QPushButton:pressed {
+    background-color: qlineargradient(x1:0, y1:0, x2:1, y2:1, stop:0 #251a47, stop:1 #3d2560);
+}
+
+QLineEdit, QTextEdit {
+    background-color: rgba(20, 21, 45, 0.7);
+    color: #e0e0ff;
+    border: 2px solid #4b2d73;
+    border-radius: 10px;
+    padding: 8px;
+    selection-background-color: #673ab7;
+    selection-color: #ffffff;
+}
+
+QTableWidget {
+    background-color: rgba(15, 16, 35, 0.8);
+    color: #e0e0ff;
+    gridline-color: #2e1f5e;
+    border: 2px solid #4b2d73;
+    border-radius: 10px;
+}
+
+QTableWidget::item:selected {
+    background-color: qlineargradient(x1:0, y1:0, x2:1, y2:1, stop:0 #673ab7, stop:1 #9c27b0);
+    color: #ffffff;
+}
+
+QHeaderView::section {
+    background-color: #14152d;
+    color: #b39ddb;
+    padding: 8px;
+    border: 1px solid #4b2d73;
+    font-weight: bold;
+}
+
+QLabel {
+    color: #e0e0ff;
+    font-weight: bold;
+    text-shadow: 0px 0px 8px rgba(179, 157, 219, 0.5);
+}
+
+QMenuBar {
+    background-color: #0a0b1a;
+    color: #e0e0ff;
+    border-bottom: 2px solid #4b2d73;
+}
+
+QMenuBar::item:selected {
+    background-color: #4b2d73;
+}
+
+QMenu {
+    background-color: #14152d;
+    color: #e0e0ff;
+    border: 1px solid #4b2d73;
+}
+
+QMenu::item:selected {
+    background-color: #4b2d73;
+}
+
+QScrollBar:vertical {
+    border: none;
+    background-color: #14152d;
+    width: 10px;
+    margin: 0px;
+}
+
+QScrollBar::handle:vertical {
+    background-color: qlineargradient(x1:0, y1:0, x2:1, y2:1, stop:0 #673ab7, stop:1 #9c27b0);
+    border-radius: 5px;
+    min-height: 20px;
+}
+
+#textEdit {
+    background-color: rgba(20, 21, 45, 0.6);
+    color: #b39ddb;
+    border: 2px solid #4b2d73;
+    border-radius: 10px;
+    padding: 8px;
+    font-weight: bold;
+}

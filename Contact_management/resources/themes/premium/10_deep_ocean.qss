@@ -1,0 +1,120 @@
+ /* تم اعماق اقیانوس - با رنگ‌های آبی و فیروزه‌ای */
+
+QMainWindow, QDialog {
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #05445E, stop:1 #031e2b);
+    color: #d4f1f9;
+    font-family: 'Vazirmatn', 'Segoe UI', 'Arial', sans-serif;
+}
+
+QPushButton {
+    background-color: #189AB4;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+QPushButton:hover {
+    background-color: #2aaac7;
+    box-shadow: 0 0 10px rgba(75, 197, 255, 0.6);
+}
+
+QPushButton:pressed {
+    background-color: #0c697d;
+}
+
+QLineEdit, QTextEdit {
+    background-color: rgba(7, 87, 117, 0.6);
+    color: #d4f1f9;
+    border: 2px solid #75E6DA;
+    border-radius: 8px;
+    padding: 8px;
+    selection-background-color: #75E6DA;
+    selection-color: #05445E;
+}
+
+QTableWidget {
+    background-color: rgba(7, 87, 117, 0.6);
+    color: #d4f1f9;
+    gridline-color: #189AB4;
+    border: 2px solid #189AB4;
+    border-radius: 8px;
+}
+
+QTableWidget::item:selected {
+    background-color: #75E6DA;
+    color: #05445E;
+}
+
+QHeaderView::section {
+    background-color: #05445E;
+    color: #75E6DA;
+    padding: 8px;
+    border: 1px solid #189AB4;
+    font-weight: bold;
+}
+
+QLabel {
+    color: #d4f1f9;
+    font-weight: bold;
+}
+
+QMenuBar {
+    background-color: #05445E;
+    color: #d4f1f9;
+    border-bottom: 2px solid #189AB4;
+}
+
+QMenuBar::item:selected {
+    background-color: #189AB4;
+}
+
+QMenu {
+    background-color: #05445E;
+    color: #d4f1f9;
+    border: 1px solid #189AB4;
+}
+
+QMenu::item:selected {
+    background-color: #189AB4;
+}
+
+QScrollBar:vertical {
+    border: none;
+    background-color: #05445E;
+    width: 10px;
+    margin: 0px;
+}
+
+QScrollBar::handle:vertical {
+    background-color: #75E6DA;
+    border-radius: 5px;
+    min-height: 20px;
+}
+
+#textEdit {
+    background-color: rgba(7, 87, 117, 0.4);
+    color: #75E6DA;
+    border: 2px solid #189AB4;
+    border-radius: 8px;
+    padding: 8px;
+    font-weight: bold;
+}
+
+/* افکت موج آب */
+QMainWindow::after {
+    content: "";
+    background-image: url(resources/images/wave_pattern.png);
+    background-repeat: repeat-x;
+    background-position: bottom;
+    opacity: 0.3;
+}
+
+/* افکت حباب‌های آب */
+QPushButton::hover {
+    background-image: url(resources/images/bubbles.png);
+    background-repeat: no-repeat;
+    background-position: right;
+}
