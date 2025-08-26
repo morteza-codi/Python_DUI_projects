@@ -1,0 +1,377 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>800</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>800</width>
+    <height>800</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>800</width>
+    <height>800</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QTextEdit" name="textEdit"/>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menufile">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="actionnew"/>
+    <addaction name="actionopen"/>
+    <addaction name="actionsave_file"/>
+    <addaction name="actionprint_file"/>
+    <addaction name="actionprint_preview"/>
+    <addaction name="actionExport_pdf"/>
+   </widget>
+   <widget class="QMenu" name="menuedit">
+    <property name="title">
+     <string>edit</string>
+    </property>
+    <addaction name="actiontext_bold"/>
+    <addaction name="actiontext_italic"/>
+    <addaction name="actiontext_underline"/>
+    <addaction name="actiontext_left"/>
+    <addaction name="actiontext_right"/>
+    <addaction name="actiontext_center"/>
+    <addaction name="actiontext_justify"/>
+    <addaction name="actiontext_up"/>
+    <addaction name="actiontext_down"/>
+   </widget>
+   <widget class="QMenu" name="menuabout">
+    <property name="title">
+     <string>about</string>
+    </property>
+    <addaction name="actionabout"/>
+   </widget>
+   <widget class="QMenu" name="menuTools">
+    <property name="title">
+     <string>Tools</string>
+    </property>
+    <addaction name="actionredo"/>
+    <addaction name="actionundo"/>
+    <addaction name="actioncopy"/>
+    <addaction name="actionpast"/>
+    <addaction name="actioncut"/>
+    <addaction name="actionclose_app"/>
+   </widget>
+   <widget class="QMenu" name="menuvip">
+    <property name="title">
+     <string>vip</string>
+    </property>
+    <addaction name="actionset_font"/>
+    <addaction name="actionset_colo"/>
+   </widget>
+   <addaction name="menufile"/>
+   <addaction name="menuedit"/>
+   <addaction name="menuTools"/>
+   <addaction name="menuvip"/>
+   <addaction name="menuabout"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <widget class="QToolBar" name="toolBar">
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionnew"/>
+   <addaction name="actionopen"/>
+   <addaction name="actionsave_file"/>
+   <addaction name="actionredo"/>
+   <addaction name="actionundo"/>
+   <addaction name="actiontext_bold"/>
+   <addaction name="actiontext_italic"/>
+   <addaction name="actiontext_underline"/>
+   <addaction name="actiontext_left"/>
+   <addaction name="actiontext_right"/>
+   <addaction name="actiontext_center"/>
+   <addaction name="actiontext_justify"/>
+   <addaction name="actionset_colo"/>
+   <addaction name="actionset_font"/>
+   <addaction name="actioncopy"/>
+   <addaction name="actionpast"/>
+   <addaction name="actioncut"/>
+   <addaction name="actionclose_app"/>
+  </widget>
+  <action name="actionnew">
+   <property name="icon">
+    <iconset resource="../../Desktop/images/Images.qrc">
+     <normaloff>:/Images/new.png</normaloff>:/Images/new.png</iconset>
+   </property>
+   <property name="text">
+    <string>new file</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+N</string>
+   </property>
+  </action>
+  <action name="actionopen">
+   <property name="icon">
+    <iconset resource="../../Desktop/images/Images.qrc">
+     <normaloff>:/Images/open.png</normaloff>:/Images/open.png</iconset>
+   </property>
+   <property name="text">
+    <string>open file</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+O</string>
+   </property>
+  </action>
+  <action name="actionsave_file">
+   <property name="icon">
+    <iconset resource="../../Desktop/images/Images.qrc">
+     <normaloff>:/Images/save.png</normaloff>:/Images/save.png</iconset>
+   </property>
+   <property name="text">
+    <string>save file</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+S</string>
+   </property>
+  </action>
+  <action name="actionprint_file">
+   <property name="icon">
+    <iconset resource="../../Desktop/images/Images.qrc">
+     <normaloff>:/Images/print.png</normaloff>:/Images/print.png</iconset>
+   </property>
+   <property name="text">
+    <string>print file</string>
+   </property>
+  </action>
+  <action name="actionprint_preview">
+   <property name="icon">
+    <iconset resource="../../Desktop/images/Images.qrc">
+     <normaloff>:/Images/printprev.png</normaloff>:/Images/printprev.png</iconset>
+   </property>
+   <property name="text">
+    <string>print preview</string>
+   </property>
+  </action>
+  <action name="actionExport_pdf">
+   <property name="icon">
+    <iconset resource="../../Desktop/images/Images.qrc">
+     <normaloff>:/Images/pdf.png</normaloff>:/Images/pdf.png</iconset>
+   </property>
+   <property name="text">
+    <string>Export pdf</string>
+   </property>
+  </action>
+  <action name="actionredo">
+   <property name="icon">
+    <iconset resource="../../Desktop/images/Images.qrc">
+     <normaloff>:/Images/redo.png</normaloff>:/Images/redo.png</iconset>
+   </property>
+   <property name="text">
+    <string>redo</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Z</string>
+   </property>
+  </action>
+  <action name="actionundo">
+   <property name="icon">
+    <iconset resource="../../Desktop/images/Images.qrc">
+     <normaloff>:/Images/undo.png</normaloff>:/Images/undo.png</iconset>
+   </property>
+   <property name="text">
+    <string>undo</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Y</string>
+   </property>
+  </action>
+  <action name="actioncopy">
+   <property name="icon">
+    <iconset>
+     <normaloff>../../Desktop/images/copy.png</normaloff>../../Desktop/images/copy.png</iconset>
+   </property>
+   <property name="text">
+    <string>copy</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+C</string>
+   </property>
+  </action>
+  <action name="actionpast">
+   <property name="icon">
+    <iconset>
+     <normaloff>../../Desktop/images/paste.png</normaloff>../../Desktop/images/paste.png</iconset>
+   </property>
+   <property name="text">
+    <string>past</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+V</string>
+   </property>
+  </action>
+  <action name="actionclose_app">
+   <property name="icon">
+    <iconset>
+     <normaloff>../../Desktop/images/exit.png</normaloff>../../Desktop/images/exit.png</iconset>
+   </property>
+   <property name="text">
+    <string>close app</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Q</string>
+   </property>
+  </action>
+  <action name="actionabout">
+   <property name="icon">
+    <iconset>
+     <normaloff>:/images/images/aboutqt.png</normaloff>:/images/images/aboutqt.png</iconset>
+   </property>
+   <property name="text">
+    <string>about</string>
+   </property>
+  </action>
+  <action name="actiontext_bold">
+   <property name="icon">
+    <iconset resource="../../Desktop/images/Images.qrc">
+     <normaloff>:/Images/bold.png</normaloff>:/Images/bold.png</iconset>
+   </property>
+   <property name="text">
+    <string>text_bold</string>
+   </property>
+  </action>
+  <action name="actiontext_italic">
+   <property name="icon">
+    <iconset resource="../../Desktop/images/Images.qrc">
+     <normaloff>:/Images/italic.png</normaloff>:/Images/italic.png</iconset>
+   </property>
+   <property name="text">
+    <string>text_italic</string>
+   </property>
+  </action>
+  <action name="actiontext_underline">
+   <property name="icon">
+    <iconset resource="../../Desktop/images/Images.qrc">
+     <normaloff>:/Images/underline.png</normaloff>:/Images/underline.png</iconset>
+   </property>
+   <property name="text">
+    <string>text_underline</string>
+   </property>
+  </action>
+  <action name="actiontext_left">
+   <property name="icon">
+    <iconset>
+     <normaloff>../../Desktop/l.png</normaloff>../../Desktop/l.png</iconset>
+   </property>
+   <property name="text">
+    <string>text_left</string>
+   </property>
+  </action>
+  <action name="actiontext_right">
+   <property name="icon">
+    <iconset>
+     <normaloff>../../Desktop/r.png</normaloff>../../Desktop/r.png</iconset>
+   </property>
+   <property name="text">
+    <string>text_right</string>
+   </property>
+  </action>
+  <action name="actiontext_center">
+   <property name="icon">
+    <iconset resource="../../Desktop/images/Images.qrc">
+     <normaloff>:/Images/center.png</normaloff>:/Images/center.png</iconset>
+   </property>
+   <property name="text">
+    <string>text_center</string>
+   </property>
+  </action>
+  <action name="actiontext_justify">
+   <property name="icon">
+    <iconset resource="../../Desktop/images/Images.qrc">
+     <normaloff>:/Images/justify.png</normaloff>:/Images/justify.png</iconset>
+   </property>
+   <property name="text">
+    <string>text_justify</string>
+   </property>
+  </action>
+  <action name="actiontext_up">
+   <property name="icon">
+    <iconset>
+     <normaloff>../../Desktop/images/up.png</normaloff>../../Desktop/images/up.png</iconset>
+   </property>
+   <property name="text">
+    <string>text_up</string>
+   </property>
+  </action>
+  <action name="actiontext_down">
+   <property name="icon">
+    <iconset>
+     <normaloff>../../Desktop/images/down.png</normaloff>../../Desktop/images/down.png</iconset>
+   </property>
+   <property name="text">
+    <string>text_down</string>
+   </property>
+  </action>
+  <action name="actioncut">
+   <property name="icon">
+    <iconset>
+     <normaloff>../../Desktop/images/cut.png</normaloff>../../Desktop/images/cut.png</iconset>
+   </property>
+   <property name="text">
+    <string>cut</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+X</string>
+   </property>
+  </action>
+  <action name="actionset_font">
+   <property name="icon">
+    <iconset resource="../../Desktop/images/Images.qrc">
+     <normaloff>:/Images/font.png</normaloff>:/Images/font.png</iconset>
+   </property>
+   <property name="text">
+    <string>set_font</string>
+   </property>
+  </action>
+  <action name="actionset_colo">
+   <property name="icon">
+    <iconset resource="../../Desktop/images/Images.qrc">
+     <normaloff>:/Images/color.png</normaloff>:/Images/color.png</iconset>
+   </property>
+   <property name="text">
+    <string>set_color</string>
+   </property>
+  </action>
+ </widget>
+ <resources>
+  <include location="../../Desktop/images/Images.qrc"/>
+ </resources>
+ <connections/>
+</ui>
